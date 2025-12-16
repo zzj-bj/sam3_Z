@@ -854,6 +854,9 @@ def visualize_prompt_overlay(
 
 
 def plot_results(img, results):
+    """
+    Z: Overlay segmentation masks and bounding boxes for each detected object on the image, then display it.
+    """
     plt.figure(figsize=(12, 8))
     plt.imshow(img)
     nb_objects = len(results["scores"])
@@ -872,6 +875,7 @@ def plot_results(img, results):
             color=color,
             relative_coords=False,
         )
+    # Z: added this line
     plt.show()
 
 

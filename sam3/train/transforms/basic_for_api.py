@@ -598,6 +598,9 @@ class RandomHorizontalFlip:
 
 
 class RandomResizeAPI:
+    """
+    Z: Randomly resize each image (optionally all with the same size) to one of the preset dimensions before downstream transforms.
+    """
     def __init__(
         self, sizes, consistent_transform, max_size=None, square=False, v2=False
     ):
@@ -881,6 +884,9 @@ class ToTensorAPI:
 
 
 class NormalizeAPI:
+    """
+    Z: Normalize image tensors (mean/std) and convert all boxes/points to normalized CxCyWH or relative coords for downstream use.
+    """
     def __init__(self, mean, std, v2=False):
         self.mean = mean
         self.std = std
@@ -921,6 +927,9 @@ class NormalizeAPI:
 
 
 class ComposeAPI:
+    """
+    Pipeline helper that applies a list of transforms to a datapoint in order and returns the result.
+    """
     def __init__(self, transforms):
         self.transforms = transforms
 
