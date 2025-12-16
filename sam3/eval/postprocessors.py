@@ -253,6 +253,9 @@ class PostProcessImage(nn.Module):
     def process_results(
         self, find_stages, find_metadatas: List[BatchedInferenceMetadata], **kwargs
     ):
+        """
+        Z: Combine per-stage outputs with metadata, restore sizes/labels, merge by image id, and trim to top-K detections per image.
+        """
         if find_stages.loss_stages is not None:
             find_metadatas = [find_metadatas[i] for i in find_stages.loss_stages]
         assert len(find_stages) == len(find_metadatas)

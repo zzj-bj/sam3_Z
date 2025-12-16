@@ -141,6 +141,9 @@ def collate_fn_api(
     repeats: int = 0,
     load_image_in_fp16: bool = False,
 ):
+    """
+    Z: Collate a list of Datapoints into batched tensors (images, prompts, targets, metadata) ready for model inference.
+    """
     # img_batch = torch.stack(sum([[img.data for img in v.images] for v in batch], []))
     img_batch = []
     text_batch = []
