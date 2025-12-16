@@ -12,7 +12,11 @@ from torchvision.transforms import v2
 
 
 class Sam3Processor:
-    """ """
+    """
+    Z: inference assistant, responsible for preparing and organizing
+    the input images, text prompts, and geometric box prompts to be fed to the model
+    and returning the filtered detection and segmentation results.
+    """
 
     def __init__(self, model, resolution=1008, device="cuda", confidence_threshold=0.5):
         self.model = model
