@@ -928,7 +928,7 @@ class NormalizeAPI:
 
 class ComposeAPI:
     """
-    Pipeline helper that applies a list of transforms to a datapoint in order and returns the result.
+    Z: Pipeline helper that applies a list of transforms to a datapoint in order and returns the result.
     """
     def __init__(self, transforms):
         self.transforms = transforms
