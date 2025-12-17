@@ -601,6 +601,9 @@ class Sam3Image(torch.nn.Module):
         inference_state,
         **kwargs,
     ) -> Tuple[np.ndarray, np.ndarray, np.ndarray]:
+        """Z: Feed cached backbone features into the interactive predictor,
+        run one instance prediction with the given prompts,
+        then clear the cached state."""
         orig_h, orig_w = (
             inference_state["original_height"],
             inference_state["original_width"],

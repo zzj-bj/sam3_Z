@@ -13,8 +13,8 @@ from torchvision.transforms import v2
 
 class Sam3Processor:
     """
-    Z: inference assistant, responsible for preparing and organizing
-    the input images, text prompts, and geometric box prompts to be fed to the model
+    Z: Inference assistant, responsible for preparing and organizing
+    input images, text prompts, and geometric box prompts to be fed to the model
     and returning the filtered detection and segmentation results.
     """
 
